@@ -1,0 +1,58 @@
+
+/* responsive */
+/* responsive */
+/* responsive */
+/* responsive */
+/* responsive */
+/* responsive */
+
+@media only screen and (max-width: 1030px) {
+    .main {
+
+        flex-direction: column;
+        top: 5px;
+        position: relative;
+    }
+
+    .items {
+        background-color: rgb(228, 0, 43);
+        width: 100%;
+        position: relative;
+        top: -310px;
+        z-index: 1;
+
+    }
+
+    .items ul {
+
+        flex-direction: column;
+        margin: 20px 35px;
+    }
+
+    .items ul li {
+        padding: 10px;
+
+    }
+
+
+    #open {
+
+        display: block;
+
+    }
+
+    #img_1 {
+
+        display: none;
+
+    }
+
+    .about {
+
+        margin: 0px 100px;
+
+
+    }
+
+
+}
