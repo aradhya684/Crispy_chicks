@@ -41,7 +41,7 @@ body::-webkit-scrollbar {
     font-size: 18px;
     color: black;
     font-family: "Rowdies", sans-serif;
-    font-weight: 300;
+    font-weight: 100;
     font-style: normal;
     font-size: 100px;
 }
@@ -55,7 +55,7 @@ body::-webkit-scrollbar {
     font-size: 18px;
     color: rgb(228, 0, 43);
     font-family: "Rowdies", sans-serif;
-    font-weight: 300;
+    font-weight: 100;
     font-style: normal;
     font-size: 30px;
 
@@ -140,15 +140,26 @@ body::-webkit-scrollbar {
 
 .about {
 
-    margin: 0px 190px;
-    display: flex;
+
+
     position: relative;
     top: 100px;
-    background-attachment: fixed;
 
 
 }
 
+.before-info {
+    margin: 0px 190px;
+    display: flex;
+}
+
+.white-background {
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    height: 930px;
+    opacity: 0.7;
+}
 
 .info {
     display: flex;
@@ -161,7 +172,7 @@ body::-webkit-scrollbar {
 .info p {
 
     font-family: "Rowdies", sans-serif;
-    font-weight: 10;
+    font-weight: 100;
     font-style: normal;
     margin: 15px 0px;
 
@@ -197,16 +208,17 @@ body::-webkit-scrollbar {
 .info p:nth-child(1) {
 
     font-size: 25px;
-    font-family: "Lobster", sans-serif;
-    /* font-weight: 400; */
+
+    font-family: "Berkshire Swash", serif;
+    font-weight: 100;
     font-style: normal;
 }
 
 .info p:nth-child(2) {
 
     font-size: 48px;
-    font-family: "Lobster", sans-serif;
-    /* font-weight: 400; */
+    font-weight: 100;
+    font-family: "Berkshire Swash", serif;
     font-style: normal;
 }
 
@@ -259,8 +271,8 @@ body::-webkit-scrollbar {
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 50px;
-    font-family: "Lobster", sans-serif;
-    /* font-weight: 400; */
+    font-weight: 100;
+    font-family: "Berkshire Swash", serif;
     font-style: normal;
     color: rgb(0, 0, 0);
 
@@ -275,7 +287,7 @@ body::-webkit-scrollbar {
     color: rgb(0, 0, 0);
     font-family: "Rowdies", sans-serif;
     font-size: 18px;
-    font-weight: 10;
+    font-weight: 100;
     font-style: normal;
 
 }
@@ -290,7 +302,7 @@ body::-webkit-scrollbar {
     transform: translate(-50%, -50%);
     color: rgb(0, 0, 0);
     font-family: "Rowdies", sans-serif;
-    font-weight: 10;
+    font-weight: 100;
     font-size: 18px;
     font-style: normal;
 
@@ -321,14 +333,11 @@ h3 {
 }
 
 .menu_before h1 {
-
-    font-family: "Lobster", sans-serif;
-    /* font-weight: 400; */
-    font-style: normal;
+    font-weight: 100;  
     color: rgb(0, 0, 0);
     font-size: 50px;
-
-
+    font-family: "Berkshire Swash", serif;
+    font-style: normal;
 
 }
 
@@ -343,4 +352,246 @@ h3 {
     line-height: 115px;
 
 
+}
+
+.menu_after {
+
+
+
+    z-index: 1;
+    top: 369px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    align-items: center;
+
+
+}
+
+.section-img {
+
+    height: 325px;
+    width: 380px;
+
+}
+
+
+.section_1 {
+
+    display: flex;
+
+}
+
+.section_2 {
+
+    display: flex;
+
+}
+
+.section_3 {
+
+    display: flex;
+
+}
+
+.min-section {
+    height: 325px;
+    display: flex;
+    width: 380px;
+    border: 1px solid rgb(228, 0, 43);
+    background-color: white;
+    word-break: keep-all;
+    line-height: 50px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+
+
+}
+
+.hotel_img {
+
+    position: relative;
+    bottom: 430px;
+
+
+}
+
+.hotel_img a {
+
+    text-decoration: none;
+
+}
+
+
+.button-discover {
+
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+}
+
+.button-discover button {
+
+    color: white;
+    background-color: rgb(228, 0, 43);
+    width: 200px;
+    height: 50px;
+    border-radius: 50px;
+    font-size: 15px;
+    position: relative;
+    cursor: pointer;
+    top: 0px;
+    transition: .4s;
+
+}
+
+.button-discover button:hover {
+
+    top: 5px;
+
+}
+
+.hotel_img img {
+
+    height: 1000px;
+    opacity: 0.9;
+    width: 100%;
+
+}
+
+.first-p {
+
+    color: rgb(228, 0, 43);
+    font-family: "Rowdies", sans-serif;
+    font-weight: 100;
+    font-size: 25px;
+    font-style: normal;
+
+}
+
+
+.second-p {
+    color: rgb(0, 0, 0);
+    font-family: "Rowdies", sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+    font-style: normal;
+}
+
+
+.third-p {
+
+    color: rgb(288, 0, 43);
+    font-family: "Rowdies", sans-serif;
+    font-weight: 100;
+    font-size: 25px;
+    font-style: normal;
+}
+
+
+
+
+/* wednesday offer */
+/* wednesday offer */
+/* wednesday offer */
+/* wednesday offer */
+/* wednesday offer */
+
+.wednesday-menu {
+
+    position: relative;
+    width: 100%;
+    bottom: 310px;
+}
+
+.offer-image img {
+
+    width: 540px;
+    height: 409px;
+    border: 1px solid rgb(228, 0, 43);
+
+}
+
+.before-wednesday-menu {
+
+
+    margin: 0px 190px;
+    display: flex;
+
+}
+
+.offer-info {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 30px;
+}
+
+
+.offer-info a {
+    text-decoration: none;
+
+}
+
+.offer-info button {
+
+    color: white;
+    background-color: rgb(228, 0, 43);
+    width: 200px;
+    height: 50px;
+    border-radius: 50px;
+    font-size: 15px;
+    position: relative;
+    cursor: pointer;
+    top: 0px;
+    transition: .4s;
+}
+
+.offer-info button:hover {
+    top: 5px;
+
+}
+
+
+.offer-info p:nth-child(1) {
+
+    font-family: "Berkshire Swash", serif;
+    font-weight: 100;
+    font-style: normal;
+    color: black;
+    font-size: 25px;
+}
+
+.offer-info p:nth-child(2) {
+
+    font-family: "Berkshire Swash", serif;
+    font-weight: 100;
+    font-style: normal;
+    color: black;
+    font-size: 45px;
+
+}
+
+
+.offer-info p:nth-child(3) {
+
+    font-family: "Rowdies", sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+    font-style: normal;
+}
+
+.offer-info p:nth-child(4) {
+ 
+    font-family: "Rowdies", sans-serif;
+    font-weight: 100;
+    font-size: 15px;
+    font-style: normal;
 }
