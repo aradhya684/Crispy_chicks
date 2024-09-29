@@ -6,6 +6,73 @@
 /* responsive */
 /* responsive */
 
+
+
+@media only screen and (max-width: 1430px) {
+
+    #p1 {
+
+        
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+        font-size: 80px;
+    }
+    
+    #p2 {
+    
+      
+        top: 54%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    
+
+        font-size: 25px;
+    
+    }
+
+
+    #fork {
+
+       
+        top: 45%;
+        left: 22%;
+        opacity: 0.8;
+        height: 430px;
+        width: 365px;
+    
+    
+    }
+    
+    #knife {
+    
+    
+        top: 45%;
+        left: 78%;
+        opacity: 0.8;
+        height: 430px;
+        width: 65px;
+    
+    }
+
+    
+#line_1 {
+    display: none;
+}
+
+
+
+#line_2 {
+    display: none;
+    
+}
+
+
+
+
+}
+
 @media only screen and (max-width: 1030px) {
     .main {
 
