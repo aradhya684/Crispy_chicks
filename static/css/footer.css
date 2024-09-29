@@ -1,0 +1,85 @@
+
+
+/* footer section  */
+/* footer section  */
+/* footer section  */
+/* footer section  */
+/* footer section  */
+
+.footer-section{
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow:hidden;
+    bottom: 0px;
+    
+}
+
+
+
+.footer-section::-webkit-scrollbar{
+    display: none;
+
+}
+
+.footer-image{
+    width: 100%;
+   
+   filter: brightness(50%);
+   z-index: -1;
+   background-attachment: fixed;
+   position: sticky;
+ 
+    
+
+}
+
+.footer-main p:nth-child(1){
+
+    position: absolute;
+
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+    font-family: "Berkshire Swash", serif;
+    font-weight: 100;
+    font-style: normal;
+    color: rgb(255, 255, 255);
+    font-size: 45px;
+
+}
+
+.footer-main p:nth-child(2){
+
+    position: absolute;
+    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+    font-family: "Berkshire Swash", serif;
+    font-weight: 100;
+    font-style: normal;
+    color: rgb(255, 255, 255);
+    font-size: 45px;
+
+}
+
+.footer-main p:nth-child(3){
+
+    position: absolute;
+    
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    font-family: "Open Sans", sans-serif;
+
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(255, 255, 255);
+
+}
