@@ -7,6 +7,7 @@
 
 var toggle = document.getElementById("items");
 var body_toggle = document.getElementById("bag_img");
+var about_toggle = document.getElementById("about");
 var display = 1;
 
 
@@ -16,6 +17,7 @@ function myFunction() {
     if (w > 1030) {
         toggle.style.top = "-310px"
         body_toggle.style.top = "0px"
+        about_toggle.style.top = "80px"
 
     }
 }
@@ -25,8 +27,9 @@ function slide() {
 
     if (display == 1) {
 
-        toggle.style.top = "0px"
-        body_toggle.style.top = "210px"
+        toggle.style.top = "10px"
+        body_toggle.style.top = "192px"
+        about_toggle.style.top = "250px"
         display = 0;
     }
 
@@ -34,6 +37,7 @@ function slide() {
 
         toggle.style.top = "-310px"
         body_toggle.style.top = "0px"
+        about_toggle.style.top = "80px"
         display = 1;
     }
 
