@@ -20,6 +20,7 @@ function myFunction() {
         about_toggle.style.top = "80px"
 
     }
+    
 }
 
 
