@@ -118,7 +118,7 @@ body::-webkit-scrollbar {
     top: 63%;
     left: 50%;
     transform: translate(-50%, -50%);
-   
+
     color: rgb(0, 0, 0);
     font-family: "Rowdies", sans-serif;
     font-weight: 300;
@@ -145,7 +145,7 @@ body::-webkit-scrollbar {
 }
 
 .before-info {
-    margin: 0px 190px;
+    /* margin: 0px 190px; */
     display: flex;
     justify-content: center;
 }
@@ -161,7 +161,7 @@ body::-webkit-scrollbar {
 .info {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    /* justify-content: space-around; */
 
 }
 
@@ -197,6 +197,7 @@ body::-webkit-scrollbar {
     cursor: pointer;
     top: 0px;
     transition: .4s;
+    right: 25px;
 
 }
 
@@ -242,7 +243,7 @@ body::-webkit-scrollbar {
     column-gap: 60px;
     position: relative;
     left: 15px;
-    
+
 }
 
 
@@ -406,7 +407,7 @@ h3 {
     height: 325px;
     display: flex;
     width: 380px;
-    
+
     border: 1px solid rgb(228, 0, 43);
     background-color: white;
     word-break: keep-all;
@@ -528,10 +529,8 @@ h3 {
 
 .before-wednesday-menu {
 
-
-    margin: 0px 190px;
     display: flex;
-
+    justify-content: center;
 }
 
 .offer-info {
@@ -575,6 +574,7 @@ h3 {
     font-style: normal;
     color: black;
     font-size: 25px;
+    width: 420px;
 }
 
 .offer-info p:nth-child(2) {
@@ -584,6 +584,7 @@ h3 {
     font-style: normal;
     color: black;
     font-size: 45px;
+    width: 420px;
 
 }
 
@@ -594,6 +595,7 @@ h3 {
     font-weight: 100;
     font-size: 20px;
     font-style: normal;
+    width: 420px;
 }
 
 .offer-info p:nth-child(4) {
@@ -602,6 +604,7 @@ h3 {
     font-weight: 100;
     font-size: 15px;
     font-style: normal;
+    width: 420px;
 }
 
 
@@ -623,18 +626,35 @@ h3 {
     flex-direction: column;
 }
 
+.before-review-section-2 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+}
+
 .review-section-2 {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    margin: 0px 190px;
+    align-items: center;
+    /* margin: 0px 150px;
+    width: 100%; */
 }
 
 .row-1 {
     display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .row-2 {
     display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 .review-section-1 {
@@ -654,10 +674,32 @@ h3 {
 
 }
 
-.reviews-combined {
+.review-1 {
 
-    margin: 30px 0px 0px 30px;
+    position: relative;
+    right: 90px;
 }
+
+.review-2 {
+    position: relative;
+    left: 90px;
+
+}
+
+.review-3 {
+
+    position: relative;
+    right: 90px;
+    top: 30px;
+}
+
+.review-4 {
+
+    position: relative;
+    left: 90px;
+    top: 30px;
+}
+
 
 
 .customer-review-info {
@@ -670,7 +712,7 @@ h3 {
 
 .customer-review-info {
     font-family: "Open Sans", sans-serif;
-
+    width: 400px;
     font-weight: 600;
     font-style: normal;
     color: rgb(33, 33, 33);
