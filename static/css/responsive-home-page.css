@@ -300,6 +300,7 @@
 
 @media only screen and (max-width: 770px) {
 
+
     /* home-section-responsive */
     /* home-section-responsive */
     /* home-section-responsive */
@@ -440,11 +441,17 @@
         width: 100%;
     }
 
-    .hotel_img {
-        bottom: 2419px;
+    /* .hotel_img {
+        
+       
+        
+    } */
+    .button-discover{
+        display: block;
     }
 
     .hotel_img img {
+        display: none;
         height: 2940px;
     }
 
@@ -484,7 +491,9 @@
     }
 
     .wednesday-menu {
-        bottom: 2310px;
+        top: 420px;
+        /* bottom: 2310px; */
+       
     }
 
     .offer-info {
@@ -522,14 +531,9 @@
     /* reviews-section-responsive */
 
     .review-section {
-        bottom: 2200px;
-    }
-
-
-
-    .footer-section {
-
-        bottom: 2020px;
+        /* bottom: 2200px; */
+        top: 480px;
+        
     }
 
 
@@ -770,7 +774,5 @@
         font-size: 11px;
         padding: 1px;
     }
-
-
 
 }
