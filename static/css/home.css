@@ -10,9 +10,13 @@ body::-webkit-scrollbar {
     display: none;
 }
 
-body{
-    height: 100vh;
+.master{
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+
 
 /* body section */
 /* body section */
@@ -367,7 +371,7 @@ h3 {
 
 
     z-index: 1;
-    top: 369px;
+    top: 330px;
     display: flex;
     flex-direction: column;
     position: relative;

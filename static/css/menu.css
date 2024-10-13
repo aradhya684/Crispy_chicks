@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.toggle {
+
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+/* footer-additional-css */
+/* footer-additional-css */
+/* footer-additional-css */
+/* footer-additional-css */
+
+@media only screen and (max-width: 770px) {
+
+    .footer-main {
+        top: 0px !important;
+
+    }
+}
+
+
+/* menu css */
+/* menu css */
+/* menu css */
+/* menu css */
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.main-menu {
+    display: flex;
+    margin: 0px 150px;
+}
+
+.side-manu {
+    position: fixed;
+}
+
+
+.side-manu a {
+    text-decoration: none;
+    color: black;
+}
+
+.side-manu h3 {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.side-manu a p,
+h3 {
+    display: block;
+    margin: 20px 10px;
+    font-family: "Montserrat", sans-serif;
+
+    font-weight: 400;
+    font-style: normal;
+}
+
+.all-items {
+    margin-top: 27px;
+    margin-left: 350px;
+    
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(244, 243, 241);
+}
+
+.header {
+    margin: 20px 0px;
+    font-family: "Open Sans", sans-serif;
+    width: 400px;
+    font-weight: 600;
+    font-style: normal;
+    text-align: left !important;
+}
+
+.row-1,
+.row-2,
+.row-3 {
+    display: flex;
+    margin-top: 30px;
+}
+
+.food-item img {
+    width: 370px;
+    height: 285px;
+    border-radius: 10px;
+}
+
+.food-item p {
+    font-family: "Open Sans", sans-serif;
+    width: 400px;
+    font-weight: 400;
+    font-style: normal;
+    padding: 10px;
+    text-align: left !important;
+}
+
+.food-item button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: rgb(228, 0, 43);
+    width: 200px;
+    height: 50px;
+    margin-top: 10px;
+    border-radius: 50px;
+    font-size: 15px;
+    position: relative;
+    cursor: pointer;
+    text-align: left !important;
+
+}
+
+.food-item button img {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+
+
+}
