@@ -265,7 +265,7 @@
         flex-direction: column;
 
     }
-    
+
     .review-1 {
         right: 0px;
         text-align: center;
@@ -441,25 +441,19 @@
         width: 100%;
     }
 
-    /* .hotel_img {
-        
-       
-        
-    } */
-    .button-discover{
+
+    .button-discover {
+        top: 840px;
+        z-index: 999;
         display: block;
+        text-align: center;
+        position: relative;
     }
 
     .hotel_img img {
         display: none;
         height: 2940px;
     }
-
-    .button-discover {
-        top: 97%;
-    }
-
-
 
     .first-p {
         font-size: 25px;
@@ -493,7 +487,7 @@
     .wednesday-menu {
         top: 420px;
         /* bottom: 2310px; */
-       
+
     }
 
     .offer-info {
@@ -533,7 +527,7 @@
     .review-section {
         /* bottom: 2200px; */
         top: 480px;
-        
+
     }
 
 }
