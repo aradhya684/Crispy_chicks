@@ -1,0 +1,19 @@
+{% extends 'base.html' %} 
+
+{% block header%}
+Beverages and Desserts
+{% endblock %}
+
+{% block content %} 
+
+{% for i in soft_drinks %}
+
+{% include 'card.html' with p=i %}
+
+{% endfor %}
+
+
+{% endblock %}
+
+
+

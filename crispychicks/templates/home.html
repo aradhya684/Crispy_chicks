@@ -1,0 +1,364 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static '/css/home.css' %}">
+    <link rel="stylesheet" href="{% static '/css/navbar.css' %}">
+    <link rel="stylesheet" href="{% static '/css/footer.css' %}">
+    <link rel="stylesheet" href="{% static '/css/responsive-home-page.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <title>Crispy Chicks Fried chicken</title>
+
+    <link rel="shortcut icon" href="static/images/home-page-images/logo.png" type="image/x-icon">
+    
+</head>
+
+<body onresize="myFunction()">
+<div class="master">
+    <!-- navbar section -->
+    <!-- navbar section -->
+    <!-- navbar section -->
+     <div class="master-1">
+    <nav class="navbar">
+        <div class="main">
+            <div class="logo">
+                <a href="{% url 'homepage' %}">
+                <img src="{% static '/images/home-page-images/logo.png' %}" alt="logo not available"></a>
+                <a href="{% url 'homepage' %}" style="text-decoration: none; color: black;">
+                <p> Crispy Chicks</p></a>
+                
+            </div>
+
+            <div class="items" id="items">
+                <ul>
+                    <li><a href="{% url 'homepage' %}" style="color: rgb(255, 255, 255);">Home</a></li>
+                    <li><a href="{% url 'productspage' %}">Menu</a></li>
+
+
+                    {% if request.user.first_name %}
+        
+                   <li>Hello, {{request.user.first_name}}</li> 
+                   <li>
+                    <a href="{% url 'showcart' %}" class="cart-btn"><img src="{% static '/images/cart.png' %}" alt=""></a>
+                    <span class="badge text-bg-secondary">3</span>
+                </li>
+                 <li> <a class="btn" href="{% url 'logoutpage' %}" role="button" id="button">Logout</a></li>  
+                    {% else %}
+
+                    <li><a class="btn btn-warning mx-2" href="{% url 'loginpage' %}" role="button">Login</a></li>
+                    
+                    <li><a class="btn" href="{% url 'registerpage' %}" role="button" id="button">Register</a></li>
+                    
+                    
+                    {% endif %}
+
+                  
+
+                </ul>
+
+            </div>
+        </div>
+        <img id="open" onclick="slide()" src="static/images/home-page-images/menu.png" alt="not available">
+    </nav>
+
+
+    <!-- body section  -->
+    <!-- body section  -->
+    <!-- body section  -->
+
+
+
+    <div class="bag_img" id="bag_img">
+
+        <img id="mainimg" src="static/images/home-page-images/chick.jpg" alt="not available">
+        <img id="fork" src="static/images/home-page-images/fork.png" alt="">
+        <p id="p1">Crispy Chicks</p>
+        <p id="p2">Chicken Specialities</p>
+        <span id="line_1"></span>
+        <p id="p3">Good Food | Good Taste</p>
+        <span id="line_2"></span>
+        <img id="knife" src="static/images/home-page-images/knife.png" alt="">
+
+    </div>
+
+    <!-- about section -->
+    <!-- about section -->
+    <!-- about section -->
+    <!-- about section -->
+
+    <div class="about" id="about">
+        <img class="white-background" src="static/images/home-page-images/whitebackground.jpg" alt="">
+
+        <div class="before-info">
+
+            <div class="info">
+
+                <p>Country's Most Loved!</p>
+                <p>Welcome</p>
+                <p>We Are Locally Crafted Food & Taste Serving Since 2002.</p>
+                <p>
+    
+                    Crispy chicks is a global chicken restaurant brand with a rich, decades-long history of success and
+                    innovation. It all started with one cook, Colonel Harland Sanders, who created a finger lickin' good
+                    recipe,with a list of 11 secret herbs and spices, We power on to serve the World’s Tastiest
+                    Chicken!
+                </p>
+
+                <a href=""> <button>➜ More About Us</button> </a>
+
+            </div>
+
+
+            <div class="img">
+                <img id="img_1" src="static/images/home-page-images/kfc.jpg" alt="">
+
+                <div class="hours">
+                    <img id="img_2" src="static/images/home-page-images/couple.jpg" alt="">
+
+                    <p id="p4">Hours</p>
+                    <p id="p5">Monday - Saturday | 11AM - 9PM</p>
+                    <p id="p6">Saturday - Sunday | 11AM - 4PM</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- menu section -->
+    <!-- menu section -->
+    <!-- menu section -->
+    <!-- menu section -->
+    <!-- menu section -->
+
+
+
+    <div class="menu_before" id="menu_before">
+        <h1>Our Menu</h1>
+        <h3>Quality Ingredients, Tasty Meals</h3>
+    </div>
+
+
+    <div class="menu_after">
+
+
+        <div class="section_1 menu-section">
+
+            <div class="min-section first-section">
+                <p class="first-p">Rice Bowls Reg</p>
+                <p class="second-p">Get this deal of Classic Chicken Rice Bowls</p>
+                <p class="third-p">₹199</p>
+            </div>
+
+            <div class="min-section">
+                <img class="section-img" src="static/images/home-page-images/bowl.jpg" alt="">
+            </div>
+
+            <div class="min-section second-section">
+                <p class="first-p">Indian Tandoori Chicken Roll</p>
+                <p class="second-p">Flavorful roll made with fried chicken strips</p>
+                <p class="third-p">₹99</p>
+            </div>
+
+        </div>
+
+        <div class="section_2 menu-section">
+
+            <div class="min-section">
+                <img class="section-img" src="static/images/home-page-images/i9.jpg" alt="">
+            </div>
+
+            <div class="min-section third-section">
+                <p class="first-p">Zinger Pro Burger</p>
+                <p class="second-p">Signature burger made with a crunchy chicken fillet</p>
+                <p class="third-p">₹249</p>
+            </div>
+
+            <div class="min-section">
+                <img class="section-img" src="static/images/home-page-images/i6.jpg" alt="">
+            </div>
+
+        </div>
+
+        <div class="section_3 menu-section">
+
+            <div class="min-section fourth-section">
+                <p class="first-p">Chocolate Lava Cake</p>
+                <p class="second-p">New Soft Chocolate cake with a chocolaty center</p>
+                <p class="third-p">₹69</p>
+            </div>
+
+            <div class="min-section">
+                <img class="section-img" src="static/images/home-page-images/i4.jpg" alt="">
+            </div>
+
+            <div class="min-section fifth-section">
+                <p class="first-p">Leg Piece Bucket Meal</p>
+                <p class="second-p">4 pieces of crispy, juicy chicken in a bucket</p>
+                <p class="third-p">₹520</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="hotel_img">
+
+        <img src="static/images/home-page-images/shop_2.jpg" alt="">
+        <a href="menu.html" class="button-discover"> <button>➜ Discover entire menu</button> </a>
+
+    </div> 
+
+
+
+
+
+    <!-- wednesday offer section  -->
+    <!-- wednesday offer section  -->
+    <!-- wednesday offer section  -->
+    <!-- wednesday offer section  -->
+    <!-- wednesday offer section  -->
+
+
+
+
+    <div class="wednesday-menu">
+        <div class="before-wednesday-menu">
+            <div class="offer-image">
+                <img src="static/images/home-page-images/wednesday_offer.jpg" alt="">
+            </div>
+
+            <div class="offer-info">
+                <p class="wednesday-menu-para">Wednesday offers</p>
+                <p class="wednesday-menu-para">Happy Hours!</p>
+                <p class="wednesday-menu-para">Indulge in an irresistible deal on Crispy chicks special chicken meal. Get
+                    16 hot, juicy chicken items for just Rs 449 and satisfy your cravings on a budget </p>
+
+                <p class="wednesday-menu-para">Wednesday Is Back Again And Crispy chicks is now offering an exciting offer for Wednesdays Only where
+                    you
+                    can Buy 4 Pcs Boneless Strips, 4 Pcs of Hot and Crispy and 8 Pcs of Chicken wings At Rs 449 Only.
+                    This
+                    offer is valid for a limited period. So Today Enjoy this
+                    fantastic deal with your friends & family.</p>
+                <a href="menu.html"><button>➜ Discover offer</button></a>
+            </div>
+        </div>
+
+    </div> 
+
+
+
+
+    <!-- reviews section  -->
+    <!-- reviews section  -->
+    <!-- reviews section  -->
+    <!-- reviews section  -->
+    <!-- reviews section  -->
+
+
+
+   
+
+    <div class="review-section">
+
+        <div class="review-section-1">
+            <p>Happy Customers!</p>
+        </div>
+        <div class="before-review-section-2">
+            <div class="review-section-2">
+                <div class="row-1">
+                    <div class="review-1 reviews-combined">
+                        <img class="review-img" src="static/images/home-page-images/user_2.jpg" alt="" height="120" width="120">
+                        <p class="customer-review-info">"Crispy chicks", one of my favourite places to have chicken. The
+                            place is really good with
+                            quick service. I had Zinger Box and it was really tasty and made my tummy full. Hope to
+                            visit it
+                            again.</p>
+                        <p class="customer-name">- Benjamin D.</p>
+                    </div>
+
+                    <div class="review-2 reviews-combined">
+                        <img class="review-img" src="static/images/home-page-images/user_2.jpg" alt="" height="120" width="120">
+                        <p class="customer-review-info">It's indeed finger Licking Good.
+                            Be it wings or crispy or to even Chicken Tenders.
+                            It's so soft and juicy that you have to be careful that you don't bit into your finger.
+                            Combos are available which can be useful with your order.</p>
+                        <p class="customer-name">- John Oksmith</p>
+                    </div>
+                </div>
+
+
+
+                <div class="row-2">
+
+                    <div class="review-3 reviews-combined">
+                        <img class="review-img" src="static/images/home-page-images/user_2.jpg" alt="" height="120" width="120">
+                        <p class="customer-review-info">Amazing offer for the wednesday. your quench to have chicken
+                            won't get over till the time you
+                            order
+                            bucket with whatever spices or taste a one would like to go with.Totally recommended</p>
+                        <p class="customer-name">- Vinod sharma</p>
+                    </div>
+
+
+                    <div class="review-4 reviews-combined">
+                        <img class="review-img" src="static/images/home-page-images/user_2.jpg" alt="" height="120" width="120">
+                        <p class="customer-review-info">Quick service, good crowd and two floors of seating makes this
+                            place a favourite. I love the
+                            food,
+                            which I
+                            won't describe in detail. But do try out the newly launched Indian Tandoori Chicken Roll.
+                        </p>
+                        <p class="customer-name">- Brook siblings</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>  
+
+</div>
+
+    <!-- footer section  -->
+    <!-- footer section  -->
+    <!-- footer section  -->
+    <!-- footer section  -->
+    <!-- footer section  -->
+
+
+            <div class="master-2">
+
+    <footer class="footer-section">
+        <div class="footer-main">
+
+            <p>Call for All Your​ Reservations</p>
+            <p>+123-456-78910</p>
+            <p>Copyright © 2024 Crispy chicks | Powered by Crispy chicks</p>
+            <img class="footer-image" src="static/images/home-page-images/footer_34.jpg" alt="">
+        </div>
+    </footer> 
+
+</div>
+</div>
+    <script src="static/js/home.js"></script>
+</body>
+
+
+</html>

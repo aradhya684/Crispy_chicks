@@ -1,0 +1,185 @@
+{% load static %}
+{% load custom_filter %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+        
+    <link rel="stylesheet" href="{% static '/css/navbar.css' %}">
+    <link rel="stylesheet" href="{% static '/css/cart.css' %}">
+    <link rel="stylesheet" href="{% static '/css/footer.css' %}">
+
+    <link rel="shortcut icon" href="{% static '/images/home-page-images/logo.png' %}" type="image/x-icon">
+    <title>Cart page</title>
+</head>
+
+<body>
+
+    <div class="master">
+        <nav class="navbar">
+            <div class="main">
+                <div class="logo">
+
+                    <img src="{% static '/images/home-page-images/logo.png' %}" alt="logo not available">
+                    <p> Crispy Chicks</p>
+
+                </div>
+
+                <div class="items" id="items">
+                    <ul>
+                        
+                        <li><a href="{% url 'homepage' %}" style="color: rgb(255, 255, 255);">Home</a></li>
+                        <li><a href="{% url 'productspage' %}">Menu</a></li>
+
+                    </ul>
+
+                </div>
+            </div>
+            <img id="open" onclick="slide()" src="{% static '/images/home-page-images/menu.png' %}" alt="not available">
+        </nav>
+
+        <div class="toggle" id="toggle">
+            {% if cart_items %}
+            <div class="master-1">
+                <h1 class="mycart">MY CART</h1>
+                
+                <div class="master-section">
+                    
+                    <section class="section-1">
+
+                        
+                       
+                        {% for i in cart_items %}
+                        <div class="my-card">
+
+                            <div class="food-img">
+                                <img src="{{ i.products.product_image.url }}" alt="">
+
+                            </div>
+                            <div class="main-info">
+
+                                <div class="info-1">
+                                    <p>{{i.products.product_name}}</p>
+                                    <a href="{% url 'delete_cart_item' i.id %}">
+                                        <p>Remove</p>
+                                    </a>
+                                </div>
+
+                                <div class="info-2">
+
+                                    <div class="plus-minus">
+                                        <form action="{% url 'update_cart_item' i.id %}">
+                                            <div class="plusflex">
+                                                <div class="plusflex-1">
+                                         <button type="button" class="minus-button" onclick="operation(-1,{{i.id}})"><img
+                                                src="{% static '/images/minus.png' %}" alt=""></button>
+
+
+                                        <input class="item_quantity" type="text" name="quantity" id="quantity-{{i.id}}" value="{{i.quantity}}" min="1" max="12">
+
+                                       <button type="button" class="plus-button" onclick="operation(1,{{i.id}})"> <img
+                                        src="{% static '/images/plus.png' %}" alt=""></button>
+                                    </div>
+
+                                        <input class="btn btn-primary" type="submit" value="Update cart">
+                                    </div>
+                                    </form>
+                                    </div>
+
+                                    <p class="price">₹{{i.quantity|multiply:i.products.product_price}}</p>
+
+                                   
+                                </div>
+                            </div>
+
+                        </div>
+                        {% endfor %}
+                       
+
+                        <div class="addmorebutton">
+                            <a href="{% url 'productspage' %}"><button class="add-more">Add more</button></a>
+                        </div>
+
+
+                    </section>
+
+
+
+                    <section class="section-2">
+                        <div class="first">
+                            <h1>6 ITEMS</h1>
+                        </div>
+                       
+                        <div class="second">
+                            <div class="payment">
+                                <p>Subtotal</p>
+                                <p>₹{{ total }}</p>
+                            </div>
+                            
+                            <div class="payment">
+                                <p>GST 5%</p>
+                                <p>₹{{ gst }}</p>
+                            </div>
+
+                            <div class="cart-line"></div>
+                        </div>
+
+                        <div class="third">
+                            <button>
+                                <p>Checkout</p>
+                                <p>₹{{ final_after_gst }}</p>
+                            </button>
+
+                        </div>
+
+
+                    </section>
+                    
+                </div>
+               
+            </div>
+            
+            {% else %}
+
+            <section class="empty-cart-section">
+                <div class="empty-cart-1">
+                    <h1>YOUR CART IS EMPTY. LET'S START AN ORDER!</h1>
+                    <a href="{% url 'productspage' %}"><button>Start order</button></a>
+                </div>
+                <div class="empty-cart-2">
+                    <img src="{% static 'images/empty_cart_2.jpg' %}" alt="">
+                </div>
+            </section>
+            {% endif %}
+
+
+            <div class="master-2">
+                <footer class="footer-section">
+                    <div class="footer-main">
+
+                        <p>Call for All Your​ Reservations</p>
+                        <p>+123-456-78910</p>
+                        <p>Copyright © 2024 Crispy chicks | Powered by Crispy chicks</p>
+                        <img class="footer-image" src="{% static '/images/home-page-images/footer_34.jpg' %}" alt="">
+                    </div>
+                </footer>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="{% static '/js/cart.js' %}"></script>
+</body>
+
+</html>

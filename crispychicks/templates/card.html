@@ -1,0 +1,27 @@
+{% load static %}
+
+
+<div class="food-item">
+    <img src="{{p.product_image.url}}" alt="">
+    <div class="small">
+        <p><b>{{p.product_name}}</b></p>
+        <p><b>₹{{p.product_price}}</b></p>
+        <p>{{p.product_description}}</p>
+        
+
+       
+        <form action="{% url 'addtocart' p.id %}">
+            <button>Add to cart<img src="{% static '/images/menu-page-images/cart-icon.png' %}">
+            </button>
+
+            
+            <button type="button" onclick="updateQuantity(-1,{{p.id}})">-</button>
+            <input type="number" name="quantity" id="quantity-{{p.id}}" value="1" min="1" max="12">
+            <button type="button" onclick="updateQuantity(1,{{p.id}})">+</button><br>
+            
+            
+          </form>
+    </div>
+
+   
+</div>

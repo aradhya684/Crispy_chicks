@@ -1,0 +1,17 @@
+{% extends 'base.html' %} 
+
+{% block header%}
+Wednesday offer!
+{% endblock %}
+
+{% block content %} 
+
+{% for i in wednesday_offer %}
+
+{% include 'card.html' with p=i %}
+
+{% endfor %}
+
+
+{% endblock %}
+

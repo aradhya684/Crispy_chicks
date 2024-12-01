@@ -1,0 +1,17 @@
+{% extends 'base.html' %} 
+
+{% block header%}
+Korean Popcorn
+{% endblock %}
+
+{% block content %} 
+
+{% for i in korean_popcorn %}
+
+{% include 'card.html' with p=i %}
+
+{% endfor %}
+
+
+{% endblock %}
+

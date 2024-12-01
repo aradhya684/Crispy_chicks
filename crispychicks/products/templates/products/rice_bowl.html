@@ -1,0 +1,19 @@
+{% extends 'base.html' %} 
+
+{% block header%}
+Rice Bowlz
+{% endblock %}
+
+{% block content %} 
+
+{% for i in rice_bowl %}
+
+{% include 'card.html' with p=i %}
+
+{% endfor %}
+
+
+{% endblock %}
+
+
+

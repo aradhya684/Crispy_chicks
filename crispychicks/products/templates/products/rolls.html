@@ -1,0 +1,16 @@
+{% extends 'base.html' %} 
+
+{% block header%}
+New Chicken Rolls
+{% endblock %}
+
+{% block content %} 
+
+{% for i in rolls %}
+
+{% include 'card.html' with p=i %}
+
+{% endfor %}
+
+
+{% endblock %}

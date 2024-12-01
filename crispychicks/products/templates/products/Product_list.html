@@ -1,0 +1,22 @@
+{% extends 'base.html' %} 
+
+{% block header%}
+Our Menu
+{% endblock %}
+
+{% block content %} 
+
+{% for i in object_list %}
+
+{% include 'card.html' with p=i %}
+
+{% endfor %}
+
+
+{% endblock %}
+
+{% block javascript %}
+
+{% include 'javascript.html' %}
+
+{% endblock %}

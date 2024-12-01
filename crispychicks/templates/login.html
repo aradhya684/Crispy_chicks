@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+
+    <link rel="stylesheet" href="{% static '/css/login.css' %}">
+
+</head>
+
+<body>
+
+
+    <div class="box">
+
+        <img src="{% static '/images/chicklogin.jpg' %}" alt="not available">
+
+        <div class="box2">
+
+            <div class="allleft">
+
+                <div id="login">Login</div>
+                {% if message %}
+                <div class="alert alert-danger" role="alert">
+                    <a href="#" class="alert-link alert-danger"><b>{{message}}</b></a>
+                </div>
+                {% endif %}
+
+                <div id="signup">Does't have an account yet? <a
+                        href="{% url 'registerpage' %}"><span>Register</span></a> </div>
+
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="itmail">
+
+                        <label for="email" id="emaillable">Username</label>
+                        <br>
+                        <input type="text" id="email" placeholder="you@example.com" name="username">
+
+                    </div>
+                    <br>
+
+                    <div class="itpass">
+
+                        <label for="pass" id="passlable">Password</label>
+
+                        <br>
+                        <input type="password" id="pass" placeholder="Enter 6 characters or more" name="password">
+                        <br>
+
+                    </div>
+
+
+
+
+                    <button type="submit" id="loginbtn">login</button>
+                </form>
+
+
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+
+</html>

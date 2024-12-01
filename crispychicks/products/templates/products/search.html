@@ -1,0 +1,18 @@
+{% extends 'base.html' %} 
+
+{% block header%}
+Items
+{% endblock %}
+
+{% block content %} 
+
+{% for i in products %}
+
+{% include 'card.html' with p=i %}
+
+{% endfor %}
+
+
+{% endblock %}
+
+

@@ -1,0 +1,770 @@
+/* responsive-section-home */
+/* responsive-section-home */
+/* responsive-section-home */
+/* responsive-section-home */
+/* responsive-section-home */
+/* responsive-section-home */
+
+
+
+
+
+@media only screen and (max-width: 1430px) {
+
+    /* home-section-responsive */
+    /* home-section-responsive */
+    /* home-section-responsive */
+    /* home-section-responsive */
+    /* home-section-responsive */
+
+    #p1 {
+
+
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        font-size: 80px;
+    }
+
+    #p2 {
+
+
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+
+        font-size: 25px;
+
+    }
+
+    #p3 {
+        top: 66%;
+        left: 50%;
+        font-size: 30px;
+
+    }
+
+
+    #fork {
+
+
+        top: 45%;
+        left: 22%;
+        opacity: 0.8;
+        height: 380px;
+        width: 365px;
+
+
+    }
+
+    #knife {
+
+
+        top: 45%;
+        left: 78%;
+        opacity: 0.8;
+        height: 380px;
+        width: 65px;
+
+    }
+
+
+    #line_1 {
+        display: none;
+    }
+
+
+
+    #line_2 {
+        display: none;
+
+    }
+}
+
+
+
+@media only screen and (max-width: 1190px) {
+
+    /* about-section-responsive */
+    /* about-section-responsive */
+    /* about-section-responsive */
+    /* about-section-responsive */
+    /* about-section-responsive */
+
+    #img_1 {
+
+        display: none;
+    }
+
+
+    /* menu-section-responsive */
+    /* menu-section-responsive */
+    /* menu-section-responsive */
+    /* menu-section-responsive */
+    /* menu-section-responsive */
+    /* menu-section-responsive */
+
+    .section_1,
+    .section_2,
+    .section_3 {
+        width: 95%;
+    }
+
+    .section-img {
+        width: 100%;
+    }
+
+    .first-p {
+        font-size: 19px;
+    }
+
+    .second-p {
+        font-size: 15px;
+        text-align: center;
+        line-height: 60px;
+    }
+
+
+}
+
+@media only screen and (max-width: 1030px) {
+
+    /* wednesday-offer-section-responsive */
+    /* wednesday-offer-section-responsive */
+    /* wednesday-offer-section-responsive */
+    /* wednesday-offer-section-responsive */
+    /* wednesday-offer-section-responsive */
+
+    .offer-image img {
+
+        width: 450px;
+    }
+
+
+    .offer-info p:nth-child(1),
+    .offer-info p:nth-child(2),
+    .offer-info p:nth-child(3),
+    .offer-info p:nth-child(4) {
+        width: 350px;
+    }
+
+
+    .offer-info p:nth-child(1) {
+        font-size: 25px;
+    }
+
+    .offer-info p:nth-child(2) {
+        font-size: 40px;
+    }
+
+    .offer-info p:nth-child(3) {
+        font-size: 17px;
+    }
+
+    .offer-info p:nth-child(4) {
+        font-size: 13px;
+    }
+
+
+}
+
+
+
+
+@media only screen and (max-width: 980px) {
+
+    /* home-section-responsive */
+    /* home-section-responsive */
+    /* home-section-responsive */
+    /* home-section-responsive */
+    /* home-section-responsive */
+
+
+
+    #p1 {
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 60px;
+    }
+
+    #p2 {
+        top: 56%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 25px;
+    }
+
+    #p3 {
+        top: 68%;
+        left: 50%;
+        font-size: 18px;
+        font-size: 30px;
+    }
+
+    #fork {
+        top: 52%;
+        left: 22%;
+        opacity: 0.8;
+        height: 320px;
+        width: 340px;
+    }
+
+    #knife {
+        top: 52%;
+        left: 78%;
+        opacity: 0.8;
+        height: 320px;
+        width: 65px;
+
+    }
+
+
+    #line_1 {
+        display: none;
+    }
+
+
+
+    #line_2 {
+        display: none;
+    }
+
+    /* wednesday-offer-section-responsive */
+    /* wednesday-offer-section-responsive */
+    /* wednesday-offer-section-responsive */
+    /* wednesday-offer-section-responsive */
+    /* wednesday-offer-section-responsive */
+
+    .offer-image img {
+
+        width: 350px;
+    }
+
+    .offer-info p:nth-child(1),
+    .offer-info p:nth-child(2),
+    .offer-info p:nth-child(3),
+    .offer-info p:nth-child(4) {
+        width: 320px;
+    }
+
+
+    /* reviews-section-responsive */
+    /* reviews-section-responsive */
+    /* reviews-section-responsive */
+    /* reviews-section-responsive */
+    /* reviews-section-responsive */
+
+    .row-1 {
+        flex-direction: column;
+    }
+
+    .row-2 {
+        flex-direction: column;
+
+    }
+
+    .review-1 {
+        right: 0px;
+        text-align: center;
+    }
+
+    .review-2 {
+
+        left: 0px;
+        top: 30px;
+        text-align: center;
+    }
+
+    .review-3 {
+        right: 0px;
+        top: 60px;
+        text-align: center;
+    }
+
+    .review-4 {
+        left: 0px;
+        top: 90px;
+        text-align: center;
+    }
+
+    .customer-review-info {
+        padding: 20px;
+        width: 100%;
+    }
+}
+
+
+
+@media only screen and (max-width: 770px) {
+
+
+    /* home-section-responsive */
+    /* home-section-responsive */
+    /* home-section-responsive */
+    /* home-section-responsive */
+    /* home-section-responsive */
+
+    #p1 {
+
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 45px;
+    }
+
+    #p2 {
+
+        top: 56%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 20px;
+    }
+
+    #p3 {
+
+        top: 68%;
+        left: 50%;
+        font-size: 18px;
+        font-size: 23px;
+    }
+
+    #fork {
+
+        top: 52%;
+        left: 22%;
+        opacity: 0.8;
+        height: 240px;
+        width: 340px;
+    }
+
+    #knife {
+
+        top: 52%;
+        left: 78%;
+        opacity: 0.8;
+        height: 240px;
+        width: 65px;
+
+    }
+
+
+    #line_1 {
+        display: none;
+    }
+
+
+
+    #line_2 {
+        display: none;
+
+    }
+
+    /* about-section-responsive */
+    /* about-section-responsive */
+    /* about-section-responsive */
+    /* about-section-responsive */
+    /* about-section-responsive */
+
+    .white-background {
+        display: none;
+    }
+
+    .before-info {
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 0px;
+    }
+
+    .info button {
+        right: 0px;
+    }
+
+    .info p:nth-child(1),
+    .info p:nth-child(2),
+    .info p:nth-child(3),
+    .info p:nth-child(4) {
+        text-align: center;
+        width: 100%;
+        right: 0;
+    }
+
+    .info a {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .info {
+        width: 100%;
+        align-items: center;
+        margin: 0px 30px;
+    }
+
+    .hours {
+        position: relative;
+        top: 60px;
+        width: 98%;
+    }
+
+    #img_2 {
+        width: 95%;
+    }
+
+    .img {
+        display: flex;
+        justify-content: center;
+        left: 0px;
+
+    }
+
+
+    /* menu-section-responsive */
+    /* menu-section-responsive */
+    /* menu-section-responsive */
+    /* menu-section-responsive */
+    /* menu-section-responsive */
+    /* menu-section-responsive */
+
+
+    .section_1,
+    .section_2,
+    .section_3 {
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .min-section {
+        width: 100%;
+    }
+
+
+    .button-discover {
+        top: 840px;
+        z-index: 999;
+        display: block;
+        text-align: center;
+        position: relative;
+    }
+
+    .hotel_img img {
+        display: none;
+        height: 2940px;
+    }
+
+    .first-p {
+        font-size: 25px;
+    }
+
+
+    .second-p {
+        font-size: 17px;
+    }
+
+    .section-img {
+        width: 60%;
+    }
+
+
+
+    /* wednesday-offer-section-responsive */
+    /* wednesday-offer-section-responsive */
+    /* wednesday-offer-section-responsive */
+    /* wednesday-offer-section-responsive */
+    /* wednesday-offer-section-responsive */
+
+
+    .before-wednesday-menu {
+
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .wednesday-menu {
+        top: 420px;
+        /* bottom: 2310px; */
+
+    }
+
+    .offer-info {
+
+        margin: 0px;
+        text-align: center;
+    }
+
+    .offer-image {
+        text-align: center;
+        width: 100%;
+    }
+
+    .offer-image img {
+        width: 85%;
+    }
+
+    .offer-info p:nth-child(1),
+    .offer-info p:nth-child(2),
+    .offer-info p:nth-child(3),
+    .offer-info p:nth-child(4) {
+
+        margin: 20px 30px;
+        width: 90%;
+    }
+
+    .offer-info a {
+        margin-top: 25px;
+    }
+
+    /* reviews-section-responsive */
+    /* reviews-section-responsive */
+    /* reviews-section-responsive */
+    /* reviews-section-responsive */
+    /* reviews-section-responsive */
+
+    .review-section {
+        /* bottom: 2200px; */
+        top: 480px;
+
+    }
+
+}
+
+
+@media only screen and (max-width: 610px) {
+
+    /* home-section-responsive */
+    /* home-section-responsive */
+    /* home-section-responsive */
+    /* home-section-responsive */
+    /* home-section-responsive */
+
+    #p1 {
+
+
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        font-size: 35px;
+    }
+
+    #p2 {
+
+
+        top: 56%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+
+        font-size: 16px;
+
+    }
+
+    #p3 {
+
+
+        top: 68%;
+        left: 50%;
+
+
+
+        font-size: 20px;
+
+
+    }
+
+    #fork {
+
+
+        top: 52%;
+        left: 22%;
+        opacity: 0.8;
+        height: 170px;
+        width: 230px;
+
+
+    }
+
+    #knife {
+
+
+        top: 52%;
+        left: 77%;
+        opacity: 0.8;
+        height: 170px;
+        width: 50px;
+
+    }
+
+
+    #line_1 {
+        display: none;
+    }
+
+
+
+    #line_2 {
+        display: none;
+
+    }
+
+    /* menu-section-responsive */
+    /* menu-section-responsive */
+    /* menu-section-responsive */
+    /* menu-section-responsive */
+    /* menu-section-responsive */
+    /* menu-section-responsive */
+
+    .section-img {
+        width: 80%;
+    }
+
+
+
+    /* reviews-section-responsive */
+    /* reviews-section-responsive */
+    /* reviews-section-responsive */
+    /* reviews-section-responsive */
+    /* reviews-section-responsive */
+
+    .customer-review-info {
+        font-size: 15px;
+        padding: 5px;
+    }
+
+}
+
+
+@media only screen and (max-width: 470px) {
+
+
+    /* home-section-responsive */
+    /* home-section-responsive */
+    /* home-section-responsive */
+    /* home-section-responsive */
+    /* home-section-responsive */
+
+
+
+    #p1 {
+
+
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        font-size: 25px;
+    }
+
+    #p2 {
+
+
+        top: 56%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+
+        font-size: 15px;
+
+    }
+
+    #p3 {
+
+
+        top: 70%;
+        left: 50%;
+
+
+
+        font-size: 15px;
+
+
+    }
+
+    #fork {
+
+
+        top: 52%;
+        left: 22%;
+        opacity: 0.8;
+        height: 150px;
+        width: 210px;
+
+
+    }
+
+    #knife {
+
+
+        top: 52%;
+        left: 77%;
+        opacity: 0.8;
+        height: 150px;
+        width: 40px;
+
+    }
+
+
+    #line_1 {
+        display: none;
+    }
+
+
+
+    #line_2 {
+        display: none;
+
+    }
+
+
+    /* about-section-responsive */
+    /* about-section-responsive */
+    /* about-section-responsive */
+    /* about-section-responsive */
+    /* about-section-responsive */
+
+
+
+    .info p:nth-child(1) {
+        font-size: 22px;
+    }
+
+    .info p:nth-child(2) {
+        font-size: 35px;
+    }
+
+    .info p:nth-child(3) {
+        font-size: 20px;
+    }
+
+    .info p:nth-child(4) {
+        font-size: 11px;
+    }
+
+
+    /* menu-section-responsive */
+    /* menu-section-responsive */
+    /* menu-section-responsive */
+    /* menu-section-responsive */
+    /* menu-section-responsive */
+    /* menu-section-responsive */
+
+    .section-img {
+        width: 100%;
+    }
+
+
+    /* reviews-section-responsive */
+    /* reviews-section-responsive */
+    /* reviews-section-responsive */
+    /* reviews-section-responsive */
+    /* reviews-section-responsive */
+
+    .customer-review-info {
+        font-size: 11px;
+        padding: 1px;
+    }
+
+}

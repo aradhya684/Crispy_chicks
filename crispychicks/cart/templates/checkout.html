@@ -1,0 +1,27 @@
+{% load static %}
+{% extends 'base.html' %} 
+
+{% block content %}
+
+<h1>CheckOut page</h1>
+<b>
+  <div class="container border border-dark border-5 p-4 mb-3">
+    <form action="" method="post">
+      {% csrf_token %} 
+      {% for i in form %}
+
+      <div class="mb-3">{{i.label_tag}} {{i}}</div>
+      {% endfor %}
+      <input type="submit" value="place order"
+        style="
+          width: 30vh;
+          color: rgb(0, 0, 0);
+          background-color: rgb(90, 187, 90);
+          height: 40px;
+          border-radius: 40px;
+        "
+      />
+    </form>
+  </div>
+</b>
+{% endblock %}

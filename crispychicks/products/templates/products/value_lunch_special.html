@@ -1,0 +1,19 @@
+{% extends 'base.html' %} 
+
+{% block header%}
+Value Lunch Specials
+{% endblock %}
+
+{% block content %} 
+
+{% for i in value_lunch_special %}
+
+{% include 'card.html' with p=i %}
+
+{% endfor %}
+
+
+{% endblock %}
+
+
+

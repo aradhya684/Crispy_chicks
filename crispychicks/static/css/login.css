@@ -1,0 +1,170 @@
+body {
+
+    background-color: rgb(228, 0, 43)
+}
+
+.box {
+
+    border: 2px solid rgb(0, 0, 0);
+    width: 1300px;
+    height: 600px;
+    position: relative;
+    left: 110px;
+    top: 60px;
+    background-color: rgba(255, 254, 254, 0.837);
+}
+
+.box img {
+    position: absolute;
+    width: 700px;
+    height: 500px;
+    left: 500px;
+    top: 50px;
+    filter: brightness(80%);
+    box-shadow: 10px 10px 10px rgb(152, 144, 144);
+}
+
+.box2 {
+
+    border: 2px solid rgb(190, 174, 174);
+    width: 400px;
+    position: absolute;
+    left: 50px;
+    top: 40px;
+    box-shadow: 10px 10px 10px rgb(152, 144, 144);
+    height: 520px;
+
+
+}
+
+.allleft {
+
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+#login {
+
+    font-size: xx-large;
+    font-weight: 500;
+}
+
+#signup {
+
+    position: relative;
+
+    font-size: larger;
+    font-weight: 400;
+    top: 15px;
+}
+
+
+.itmail {
+    font-size: larger;
+    font-weight: 400;
+
+    position: relative;
+
+    top: 50px;
+}
+
+.itpass {
+
+    font-size: larger;
+    font-weight: 400;
+    position: relative;
+    top: 50px;
+
+}
+
+#email {
+    position: relative;
+    top: 15px;
+    width: 330px;
+    height: 30px;
+
+}
+
+
+#pass {
+    position: relative;
+    top: 25px;
+    width: 330px;
+    height: 30px;
+}
+
+
+#emaillable {
+    position: relative;
+
+}
+
+
+#passlable {
+    position: relative;
+    top: 20px;
+}
+
+#passlable span {
+    position: relative;
+    left: 130px;
+}
+
+
+
+
+#loginbtn {
+
+    color: white;
+background-color: rgb(228, 0, 43);
+width: 200px;
+height: 50px;
+text-align: center;
+margin-top: 10px;
+border-radius: 50px;
+font-size: 15px;
+position: relative;
+cursor: pointer;
+
+
+    
+    padding: 10px;
+  
+    top: 110px;
+    left: 60px;
+
+}
+
+#diffmet {
+
+    position: relative;
+    left: 20px;
+    top: 130px;
+    font-size: larger;
+    font-weight: 400;
+
+
+}
+
+#google {
+    position: relative;
+    font-size: larger;
+    font-weight: 400;
+    padding: 10px;
+    width: 120px;
+    top: 160px;
+    left: 30px;
+
+}
+
+#facebook {
+    position: relative;
+    font-size: larger;
+    padding: 10px;
+    width: 120px;
+    font-weight: 400;
+    top: 160px;
+    left: 50px;
+
+}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %} 
+
+{% block header%}
+Burgers
+{% endblock %}
+
+{% block content %} 
+
+{% for i in burger %}
+
+{% include 'card.html' with p=i %}
+
+{% endfor %}
+
+
+{% endblock %}
+

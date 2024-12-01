@@ -1,0 +1,141 @@
+/* footer section  */
+/* footer section  */
+/* footer section  */
+/* footer section  */
+/* footer section  */
+
+.footer-main {
+
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+
+
+.footer-section::-webkit-scrollbar {display: none;}
+
+.footer-image {
+
+    filter: brightness(35%);
+    z-index: -1;
+    background-attachment: fixed;
+    position: sticky;
+    bottom: 0px;
+}
+
+.footer-main p:nth-child(1) {
+
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    font-family: "Berkshire Swash", serif;
+    font-weight: 100;
+    font-style: normal;
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+
+}
+
+.footer-main p:nth-child(2) {
+
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    font-family: "Berkshire Swash", serif;
+    font-weight: 100;
+    font-style: normal;
+    color: rgb(255, 255, 255);
+    font-size: 45px;
+
+}
+
+.footer-main p:nth-child(3) {
+
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(255, 255, 255);
+
+}
+
+
+
+/* footer-section-responsive */
+/* footer-section-responsive */
+/* footer-section-responsive */
+/* footer-section-responsive */
+/* footer-section-responsive */
+
+
+
+@media only screen and (max-width: 770px) {
+
+
+    .footer-main p:nth-child(1) {
+        font-size: 40px;
+    }
+
+    .footer-main p:nth-child(2) {
+        font-size: 40px;
+    }
+
+    .footer-main {
+        top: 620px;
+
+    }
+
+
+}
+
+@media only screen and (max-width: 610px) {
+
+    .footer-main p:nth-child(1) {
+        font-size: 35px;
+        top: 23%;
+    }
+
+    .footer-main p:nth-child(2) {
+        font-size: 33px;
+        top: 48%;
+    }
+
+    .footer-main p:nth-child(3) {
+        font-size: 16px;
+        top: 72%;
+    }
+}
+
+
+@media only screen and (max-width: 470px) {
+
+
+    .footer-main p:nth-child(1) {
+        font-size: 25px;
+        top: 26%;
+    }
+
+    .footer-main p:nth-child(2) {
+        font-size: 24px;
+        top: 47%;
+    }
+
+    .footer-main p:nth-child(3) {
+        font-size: 12px;
+        top: 66%;
+    }
+}
