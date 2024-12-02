@@ -6,13 +6,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="{% static '/css/navbar.css' %}">
     <link rel="stylesheet" href="{% static '/css/login.css' %}">
 
+    <style>
+        * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+    </style>
 </head>
 
 <body>
+    <nav class="navbar">
+        <div class="main">
+            <div class="logo">
+                <a href="{% url 'homepage' %}">
+                <img src="{% static '/images/home-page-images/logo.png' %}" alt="logo not available"></a>
+                <a href="{% url 'homepage' %}" style="text-decoration: none; color: black;">
+                <p> Crispy Chicks</p></a>
+                
+            </div>
 
+            <div class="items" id="items">
+                <ul>
+                    <li><a href="{% url 'homepage' %}" style="color: rgb(255, 255, 255);">Home</a></li>
+                    <li><a href="{% url 'productspage' %}">Menu</a></li>
+                    <li><a class="btn" href="{% url 'registerpage' %}" role="button" id="button">Register</a></li>
+
+                </ul>
+
+            </div>
+        </div>
+        <img id="open" onclick="slide()" src="static/images/home-page-images/menu.png" alt="not available">
+    </nav>
 
     <div class="box">
 

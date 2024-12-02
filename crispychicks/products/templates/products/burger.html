@@ -1,5 +1,7 @@
 {% extends 'base.html' %} 
-
+{% block title%}
+Burgers
+        {% endblock %}
 {% block header%}
 Burgers
 {% endblock %}
@@ -15,3 +17,8 @@ Burgers
 
 {% endblock %}
 
+{% block javascript %}
+
+{% include 'cart_javascript.html' %}
+
+{% endblock %}

@@ -115,6 +115,19 @@
    
 }
 
+.user-register{
+    color: white;
+    background-color: rgb(228, 0, 43);
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 50px;
+    
+    position: relative;
+    
+}
+
 /* navbar-section-responsive */
 /* navbar-section-responsive */
 /* navbar-section-responsive */

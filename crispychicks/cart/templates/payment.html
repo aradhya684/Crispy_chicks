@@ -1,19 +1,64 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Payment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="{% static '/css/navbar.css' %}">
+
+    <style>
+        * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+    </style>
 </head>
 <body>
+    
+    <nav class="navbar">
+        <div class="main">
+            <div class="logo">
+                <a href="{% url 'homepage' %}">
+                <img src="{% static '/images/home-page-images/logo.png' %}" alt="logo not available"></a>
+                <a href="{% url 'homepage' %}" style="text-decoration: none; color: black;">
+                <p> Crispy Chicks</p></a>
+                
+            </div>
+    
+            <div class="items" id="items">
+              
+    
+            </div>
+        </div>
+        <img id="open" onclick="slide()" src="static/images/home-page-images/menu.png" alt="not available">
+    </nav>
+    
     
 
     
     <h1>Payment</h1>
 
-    <button id="rzp-button1">Pay with Razorpay</button>
+<button id="rzp-button1">Pay with Razorpay</button>
+
+
+
+
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 <script>
+
 var options = {
 "key": "rzp_test_9OqmIDeq85cvr3", // Enter the Key ID generated from the Dashboard
 "amount": "{{payment.amount}}", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
@@ -45,3 +90,8 @@ e.preventDefault();
 
 </body>
 </html>
+
+
+
+
+

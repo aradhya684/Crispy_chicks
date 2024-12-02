@@ -66,6 +66,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'cart.custom_context_processor.cart_context_processors'
             ],
         },
     },
@@ -149,3 +150,4 @@ EMAIL_HOST_USER = "aradhyaambole92@gmail.com"
 EMAIL_HOST_PASSWORD = "wxct eaok vdah lggw"
 
 EMAIL_USE_TLS = "True"
+

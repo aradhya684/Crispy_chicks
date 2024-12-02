@@ -55,7 +55,12 @@
                    <li>Hello, {{request.user.first_name}}</li> 
                    <li>
                     <a href="{% url 'showcart' %}" class="cart-btn"><img src="{% static '/images/cart.png' %}" alt=""></a>
-                    <span class="badge text-bg-secondary">3</span>
+                   
+                    {% if count %}
+                    <span class="badge text-bg-secondary">{{count}}</span>
+                    {% else %}
+                    <span class="badge text-bg-secondary">0</span>
+                    {% endif %}
                 </li>
                  <li> <a class="btn" href="{% url 'logoutpage' %}" role="button" id="button">Logout</a></li>  
                     {% else %}
@@ -119,7 +124,7 @@
                     Chicken!
                 </p>
 
-                <a href=""> <button>➜ More About Us</button> </a>
+                <a href="{% url 'productspage' %}"> <button>➜ More About Us</button> </a>
 
             </div>
 
@@ -220,7 +225,7 @@
     <div class="hotel_img">
 
         <img src="static/images/home-page-images/shop_2.jpg" alt="">
-        <a href="menu.html" class="button-discover"> <button>➜ Discover entire menu</button> </a>
+        <a href="{% url 'productspage' %}" class="button-discover"> <button>➜ Discover entire menu</button> </a>
 
     </div> 
 
@@ -255,7 +260,7 @@
                     This
                     offer is valid for a limited period. So Today Enjoy this
                     fantastic deal with your friends & family.</p>
-                <a href="menu.html"><button>➜ Discover offer</button></a>
+                <a href="{% url 'productspage' %}"><button>➜ Discover offer</button></a>
             </div>
         </div>
 

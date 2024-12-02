@@ -1,5 +1,7 @@
 {% extends 'base.html' %} 
-
+{% block title%}
+Chicken Buckets
+        {% endblock %}
 {% block header%}
 Chicken Buckets
 {% endblock %}
@@ -15,3 +17,8 @@ Chicken Buckets
 
 {% endblock %}
 
+{% block javascript %}
+
+{% include 'cart_javascript.html' %}
+
+{% endblock %}

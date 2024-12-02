@@ -28,3 +28,7 @@ class Order(models.Model):
     updated_at = models.DateTimeField(auto_now = True,null = True)
     paid = models.BooleanField(default = False)
 
+class OrderItem(models.Model):
+    order=models.ForeignKey(Order,on_delete=models.CASCADE)
+    quantity=models.IntegerField(default=0)
+    products=models.ForeignKey(Product,on_delete=models.PROTECT)

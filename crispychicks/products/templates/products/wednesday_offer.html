@@ -1,5 +1,7 @@
 {% extends 'base.html' %} 
-
+{% block title%}
+Wednesday offer!
+        {% endblock %}
 {% block header%}
 Wednesday offer!
 {% endblock %}
@@ -15,3 +17,8 @@ Wednesday offer!
 
 {% endblock %}
 
+{% block javascript %}
+
+{% include 'cart_javascript.html' %}
+
+{% endblock %}

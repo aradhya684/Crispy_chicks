@@ -147,7 +147,7 @@ body::-webkit-scrollbar {
     text-align: center;
 }
 
-.food-item img {
+.product_image{
     width: 370px;
     height: 285px;
     border-radius: 10px;
@@ -162,10 +162,8 @@ body::-webkit-scrollbar {
 
 }
 
-.food-item button {
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
+.add-to-cart-button {
+   
     color: white;
     background-color: rgb(228, 0, 43);
     width: 200px;
@@ -182,7 +180,7 @@ body::-webkit-scrollbar {
     filter: opacity(80%);
 }
 
-.food-item button img {
+.add-to-cart-button img {
     width: 20px;
     height: 20px;
     margin-left: 10px;
@@ -236,3 +234,55 @@ body::-webkit-scrollbar {
 .rice-bowl {
     margin-bottom: 80px;
 }
+
+
+.small form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.update-item{
+display: flex;
+
+}
+
+.plus-button img {
+
+    width: 25px;
+    height: 25px;
+    position: relative;
+    top: 2px;
+}
+
+.minus-button img {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    top: 2px;
+}
+
+
+.plus-button,
+.minus-button {
+    border-radius: 50%;
+    margin: 0px 10px;
+    cursor: pointer;
+
+}
+
+.item_quantity_menu{
+    width: 25px;
+    text-align: center;
+    color: black;
+    border-color: transparent;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 20px;
+    background: transparent;
+  }
+  
+  .item_quantity_menu:focus{
+    outline: none;
+  }

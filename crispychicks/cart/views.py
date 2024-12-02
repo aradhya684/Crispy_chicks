@@ -1,5 +1,5 @@
 from django.shortcuts import render,HttpResponseRedirect
-from .models import cart,CartItem,Order
+from .models import cart,CartItem,Order,OrderItem
 from products.models import Product
 from .forms import orderform
 import uuid
@@ -17,6 +17,7 @@ def add_to_cart(request,productID):
  
     currentUser = request.user
     cart_obj,created = cart.objects.get_or_create(user = currentUser) #name of varible and model should not be same
+    request.session["cart_id"]=cart_obj.id
     cartitem,created = CartItem.objects.get_or_create(cart = cart_obj,products = Product.cust_manager.get(id = productID))
     product_quantity = int(request.GET.get('quantity'))
     if created:
@@ -66,7 +67,7 @@ def checkout(request):
         form = orderform(request.POST)
         if form.is_valid():
             print(form.cleaned_data)
-            Order.objects.create(order_id = uuid.uuid4().hex,
+            order=Order.objects.create(order_id = uuid.uuid4().hex,
                                   user = request.user,
                                     address_line_1 = form.cleaned_data["address_line_1"],
                                      address_line_2 = form.cleaned_data["address_line_2"],
@@ -76,17 +77,17 @@ def checkout(request):
                                       phone_no = form.cleaned_data['phone_no'])
             
             cart_id=request.session.get("cart_id")
-            cart=Cart.objects.get(id= cart_id)
-            cartitems=cart.cartitem_set.all()
+            Cart=cart.objects.get(id= cart_id)
+            cartitems=Cart.cartitem_set.all()
 
 
 
-            for cartitem in cartitems:
+            for i in cartitems:
                 OrderItem.objects.create(order=order,
-                                         quantity=cartitem.quantity,
-                                         products=cartitem.products)
+                                         quantity=i.quantity,
+                                         products=i.products)
 
-    return HttpResponseRedirect("/cart/checkout/")
+    return HttpResponseRedirect("/cart/payment/"+order.order_id)
 
 
 
@@ -120,10 +121,20 @@ def paymentSuccess(request,orderId):
         order.save()
         send_mail(f"[{order.order_id} placed]",
                   "Order placed successfully...",
-                   EMAIL_HOST_USER,["asaahire8@gmail.com","sadhvijadhav062@gmail.com","priyanka.vibhute@itvedant.com"],
+                   EMAIL_HOST_USER,["lol9221312033@gmail.com"],
                   fail_silently=False)
+        
+        
+        currentUser=request.user
+        Cart=cart.objects.get(user=currentUser)
+        cartitems=Cart.cartitem_set.all()
+        total=0
+        for cartitem in cartitems:
+             cartitem.delete()
 
-    return render(request,"success.html")
+    return render(request,"success.html",{"orderitems":order.orderitem_set.all()})
+
+    
 
 
 

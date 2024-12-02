@@ -86,7 +86,7 @@
                                                 src="{% static '/images/minus.png' %}" alt=""></button>
 
 
-                                        <input class="item_quantity" type="text" name="quantity" id="quantity-{{i.id}}" value="{{i.quantity}}" min="1" max="12">
+                                        <input class="item_quantity" type="text" name="quantity" id="quantity-{{i.id}}" value="{{i.quantity}}">
 
                                        <button type="button" class="plus-button" onclick="operation(1,{{i.id}})"> <img
                                         src="{% static '/images/plus.png' %}" alt=""></button>
@@ -136,11 +136,12 @@
                         </div>
 
                         <div class="third">
+                            <a href="{% url 'checkout' %}" style="text-decoration: none; color: white;">
                             <button>
                                 <p>Checkout</p>
                                 <p>₹{{ final_after_gst }}</p>
                             </button>
-
+                        </a>
                         </div>
 
 

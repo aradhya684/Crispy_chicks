@@ -1,14 +1,129 @@
-
+{% load static %}
+{% load custom_filter %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
-</head>
-<body>
-   <h1>Payment successfull</h1>
-</body>
-</html>
-  
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet">
+      <link rel="stylesheet" href="{% static '/css/cart.css' %}">
+   <link rel="stylesheet" href="{% static '/css/navbar.css' %}">
+   <title>Success</title>
+   <style>
+      * {
+         box-sizing: border-box;
+         margin: 0;
+         padding: 0;
 
+      }
+     
+      .price {
+    
+    width: 100%;
+    left: 25px;
+    font-size: 20px;
+}
+      .my-card {
+         width: 50%;
+      }
+      .info-1 {
+    line-height: 2.2rem;
+    
+}
+.main-headline{
+   margin-top: 30px;
+    margin-left: 30px;
+    line-height: 3rem;
+}
+
+   </style>
+</head>
+
+<body>
+
+   <nav class="navbar">
+      <div class="main">
+         <div class="logo">
+
+            <a href="{% url 'homepage' %}">
+               <img src="{% static '/images/home-page-images/logo.png' %}" alt="logo not available"></a>
+            <a href="{% url 'homepage' %}" style="text-decoration: none; color: black;">
+               <p> Crispy Chicks</p>
+            </a>
+
+
+         </div>
+
+         <div class="items" id="items">
+            <ul>
+               <li><a href="{% url 'homepage' %}" style="color: rgb(255, 255, 255);">Home</a></li>
+               <li><a href="{% url 'productspage' %}">Menu</a></li>
+
+
+               {% if request.user.first_name %}
+
+               <li>Hello, {{request.user.first_name}}</li>
+               <li>
+                  <a href="{% url 'showcart' %}" class="cart-btn"><img src="{% static '/images/cart.png' %}" alt=""></a>
+
+                  {% if count %}
+                  <span class="badge">{{count}}</span>
+                  {% else %}
+                  <span class="badge">0</span>
+                  {% endif %}
+               </li>
+
+               {% endif %}
+
+
+            </ul>
+
+         </div>
+      </div>
+      <img id="open" onclick="slide()" src="{% static '/images/home-page-images/menu.png' %}" alt="not available">
+   </nav>
+   <div class="main-headline">
+      <h1>Payment successfull</h1>
+      <h2>Your order items..</h2>
+   </div>
+  
+      
+      {% for i in orderitems %}
+      <div class="my-card">
+
+         <div class="food-img">
+             <img src="{{ i.products.product_image.url }}" alt="">
+
+         </div>
+         <div class="main-info">
+
+             <div class="info-1">
+                 <p><span>{{i.products.product_name}}</span></p>
+                 <p class="card-text">Price: <span>₹{{i.products.product_price}}</span></p>
+                  <p class="card-text">Quantity: <span>{{i.quantity}}</span></p>
+             </div>
+
+                 </form>
+                 </div>
+
+                 <p class="price">Total Price: ₹{{i.quantity|multiply:i.products.product_price}}</p>
+
+                
+             </div>
+         </div>
+
+     </div>
+     {% endfor %}
+   
+</body>
+
+</html>

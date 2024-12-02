@@ -1,5 +1,7 @@
 {% extends 'base.html' %} 
-
+{% block title%}
+Value Lunch Specials
+        {% endblock %}
 {% block header%}
 Value Lunch Specials
 {% endblock %}
@@ -15,5 +17,9 @@ Value Lunch Specials
 
 {% endblock %}
 
+{% block javascript %}
 
+{% include 'cart_javascript.html' %}
+
+{% endblock %}
 
