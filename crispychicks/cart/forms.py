@@ -6,4 +6,4 @@ class orderform(forms.ModelForm):
     class Meta:
         model = Order
         fields = "__all__"
-        exclude = ['order_id','user']
+        exclude = ['order_id','user','paid']

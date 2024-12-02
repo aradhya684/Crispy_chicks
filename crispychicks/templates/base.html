@@ -4,6 +4,8 @@
 
 <head>
     {% include 'links.html' %}
+    <title>{% block title%}
+        {% endblock %}</title>
 </head>
 
 <body onresize="sizefunction()" onscroll="scrollfunction()">
@@ -42,8 +44,6 @@
                         <div class="menu-items">
 
                             {% include 'search_bar.html' %}
-
-                           
 
                             <section class="all-items">
 
