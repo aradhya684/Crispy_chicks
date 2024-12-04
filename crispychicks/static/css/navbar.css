@@ -148,7 +148,7 @@
         background-color: rgb(228, 0, 43);
         width: 100%;
         position: relative;
-        top: -310px;
+        top: -400px;
         z-index: 1;
 
     }
@@ -169,6 +169,11 @@
         display: block;
 
     }
+
+    .badge {
+        
+        width: 8%;
+    }    
 
 }
 

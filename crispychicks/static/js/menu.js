@@ -14,7 +14,7 @@ var w;
 function sizefunction() {
     w = window.outerWidth;
     if (w > 1030) {
-        toggle.style.top = "-305px"
+        toggle.style.top = "-400px"
         togglemenu.style.top = "0px"
     }
 };
@@ -30,7 +30,7 @@ function slide() {
 
     else {
 
-        toggle.style.top = "-305px"
+        toggle.style.top = "-400px"
         togglemenu.style.top = "0px"
         display = 1;
     }

@@ -81,6 +81,8 @@
         display: none;
 
     }
+
+  
 }
 
 
@@ -131,6 +133,9 @@
 
 @media only screen and (max-width: 1030px) {
 
+    .badge{
+        width: 3%;
+    }
     /* wednesday-offer-section-responsive */
     /* wednesday-offer-section-responsive */
     /* wednesday-offer-section-responsive */

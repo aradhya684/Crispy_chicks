@@ -16,7 +16,7 @@ var display = 1;
 function myFunction() {
     let w = window.outerWidth;
     if (w > 1030) {
-        toggle.style.top = "-310px"
+        toggle.style.top = "-400px"
         body_toggle.style.top = "0px"
         about_toggle.style.top = "80px"
         manu_toggle.style.top = "300px"
@@ -27,22 +27,22 @@ function myFunction() {
 
 function slide() {
 
-    if (display == 1) {
+    if (display == 0) {
 
-        toggle.style.top = "10px"
+        toggle.style.top = "5px"
         body_toggle.style.top = "192px"
         about_toggle.style.top = "250px"
         manu_toggle.style.top = "350px"
-        display = 0;
+        display = 1;
     }
 
     else {
 
-        toggle.style.top = "-310px"
+        toggle.style.top = "-400px"
         body_toggle.style.top = "0px"
         about_toggle.style.top = "80px"
         manu_toggle.style.top = "300px"
-        display = 1;
+        display = 0;
     }
 
 }
