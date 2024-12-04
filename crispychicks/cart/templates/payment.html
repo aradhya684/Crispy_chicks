@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
         <link rel="stylesheet" href="{% static '/css/navbar.css' %}">
+        <link rel="stylesheet" href="{% static '/css/cart.css' %}">
 
     <style>
         * {
@@ -46,12 +47,48 @@
         <img id="open" onclick="slide()" src="static/images/home-page-images/menu.png" alt="not available">
     </nav>
     
+
+    <h1 style="margin: 20px;">Payment</h1>
+
+    <section class="section-2">
+        <div class="first">
+            {% if count == 1 %}
+            <h1>{{count}} ITEM</h1>
+            {% else %}
+            <h1>{{count}} ITEMS</h1>
+            {% endif %}
+            
+        </div>
+       
+        <div class="second">
+            <div class="payment">
+                <p>Subtotal</p>
+                <p>₹{{ total_price}}</p>
+            </div>
+            
+            <div class="payment">
+                <p>GST 5%</p>
+                <p>₹{{ gst }}</p>
+            </div>
+
+            <div class="cart-line"></div>
+        </div>
+
+        <div class="third" style="display: flex; justify-content: center; align-items: center;">
+            
+            
+            <button id="rzp-button1" style="width: 70%; padding: 20px;">
+                Pay with Razorpay
+                <p>₹{{ final_after_gst }}</p>
+            </button>
+        
+        </div>
+
+
+    </section>
     
 
-    
-    <h1>Payment</h1>
 
-<button id="rzp-button1">Pay with Razorpay</button>
 
 
 

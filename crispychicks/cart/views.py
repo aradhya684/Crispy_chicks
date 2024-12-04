@@ -32,7 +32,7 @@ def add_to_cart(request,productID):
 def show_cart(request):
     currentUser = request.user
     user_cart = cart.objects.get(user = currentUser)
-    cart_items = user_cart.cartitem_set.all() #here cartitem in our model name it is converted into lowercase from uppercase
+    cart_items = user_cart.cartitem_set.all() #here cartitem is our model name it is converted into lowercase from uppercase
     total = 0
     for i in cart_items:
         total += i.quantity*i.products.product_price
@@ -98,11 +98,22 @@ def payment(request,orderId):
     total=0
     for orderitem in orderitems:
         total+=orderitem.quantity*orderitem.products.product_price
+        
+    currentUser = request.user
+    user_cart = cart.objects.get(user = currentUser)
+    cart_items = user_cart.cartitem_set.all() #here cartitem is our model name it is converted into lowercase from uppercase
+    total_price = 0
+    for i in cart_items:
+        total_price += i.quantity*i.products.product_price
+        
+    final_price = total_price
+    gst = round(final_price*0.05,2)
+    final_after_gst = final_price+gst
 
     client=razorpay.Client(auth=("rzp_test_9OqmIDeq85cvr3","LVkt6Cs9VskcAarHG1ryJNdr"))
     data = { "amount": total*100, "currency": "INR", "receipt": orderId }
     payment=client.order.create(data=data)
-    return render(request,"payment.html",{"payment":payment})
+    return render(request,"payment.html",{"payment":payment,"total_price":final_price,"gst":gst,"final_after_gst":final_after_gst})
 
 
 @csrf_exempt
@@ -134,7 +145,6 @@ def paymentSuccess(request,orderId):
 
     return render(request,"success.html",{"orderitems":order.orderitem_set.all()})
 
-    
 
 
 

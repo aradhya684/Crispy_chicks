@@ -118,7 +118,12 @@
 
                     <section class="section-2">
                         <div class="first">
-                            <h1>6 ITEMS</h1>
+                            {% if count == 1 %}
+                            <h1>{{count}} ITEM</h1>
+                            {% else %}
+                            <h1>{{count}} ITEMS</h1>
+                            {% endif %}
+                            
                         </div>
                        
                         <div class="second">
