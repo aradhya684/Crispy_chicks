@@ -132,7 +132,7 @@ def paymentSuccess(request,orderId):
         order.save()
         send_mail(f"[{order.order_id} placed]",
                   "Order placed successfully...",
-                   EMAIL_HOST_USER,["lol9221312033@gmail.com"],
+                   EMAIL_HOST_USER,["gauriambole123@gmail.com"],
                   fail_silently=False)
         
         
