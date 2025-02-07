@@ -2,8 +2,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -63,7 +61,7 @@
         <div class="second">
             <div class="payment">
                 <p>Subtotal</p>
-                <p>₹{{ total_price}}</p>
+                <p>₹{{total_price}}</p>
             </div>
             
             <div class="payment">
@@ -100,7 +98,7 @@ var options = {
 "key": "rzp_test_9OqmIDeq85cvr3", // Enter the Key ID generated from the Dashboard
 "amount": "{{payment.amount}}", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
 "currency": "INR",
-"name": "Superpet",
+"name": "Crispy Chicks Chicken",
 "description": "Test Transaction",
 "image": "https://example.com/your_logo",
 "order_id": "{{payment.id}}", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1

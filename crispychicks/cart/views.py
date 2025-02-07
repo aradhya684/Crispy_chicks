@@ -68,13 +68,13 @@ def checkout(request):
         if form.is_valid():
             print(form.cleaned_data)
             order=Order.objects.create(order_id = uuid.uuid4().hex,
-                                  user = request.user,
-                                    address_line_1 = form.cleaned_data["address_line_1"],
-                                     address_line_2 = form.cleaned_data["address_line_2"],
-                                      city = form.cleaned_data['city'], 
-                                      state = form.cleaned_data['state'], 
-                                      pincode = form.cleaned_data['pincode'], 
-                                      phone_no = form.cleaned_data['phone_no'])
+                                       user = request.user,
+                                       address_line_1 = form.cleaned_data["address_line_1"],
+                                       address_line_2 = form.cleaned_data["address_line_2"],
+                                       city = form.cleaned_data['city'], 
+                                       state = form.cleaned_data['state'], 
+                                       pincode = form.cleaned_data['pincode'], 
+                                       phone_no = form.cleaned_data['phone_no'])
             
             cart_id=request.session.get("cart_id")
             Cart=cart.objects.get(id= cart_id)
